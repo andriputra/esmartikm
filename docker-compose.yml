@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  app:
+    restart: always
+    build:
+      context: '.'
+      target: 'prod'
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      HOST: 0.0.0.0
