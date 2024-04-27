@@ -16,7 +16,11 @@
 
 .top-bar {
   @apply p-5 h-24 flex flex-wrap items-center gap-x-6 gap-y-5;
-
+  @media (min-width: 320px) and (max-width: 768px){
+    column-gap: 0.9rem;
+    row-gap: 0px;
+    padding: 0px;
+  }
   > img {
     @apply h-10 lg:h-12;
   }
