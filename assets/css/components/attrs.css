@@ -1,0 +1,23 @@
+.attrs > li {
+  @apply flex py-1 border-t;
+
+  &.attr__multiline {
+    @apply block;
+  }
+}
+
+.attr__multiline span {
+  @apply block;
+}
+
+.attrs__key {
+  @apply text-gray-500 leading-tight mr-4 text-sm my-1 w-32;
+
+  .attr__multiline & {
+    @apply w-auto;
+  }
+}
+
+.attrs__val {
+  @apply flex-1;
+}

@@ -1,0 +1,36 @@
+.file-input__row {
+  @apply py-2 px-3 bg-gray-200 bg-opacity-50 border border-transparent rounded relative flex justify-between hover:border-gray-300;
+
+  .file-input--error & {
+    @apply text-red-700 border-red-700;
+  }
+
+  label {
+    @apply absolute inset-0 z-0 px-10 py-2 leading-none;
+  }
+
+  input {
+    @apply w-0 h-0 overflow-hidden;
+  }
+}
+
+.file-input__indicator,
+.file-input__delete {
+  @apply relative z-10;
+}
+
+.file-input__indicator {
+  @apply text-gray-400;
+
+  .file-input__row--selected & {
+    @apply text-gray-700;
+  }
+}
+
+.file-input__delete {
+  @apply text-red-700 cursor-pointer;
+}
+
+.file-input__placeholder {
+  @apply text-gray-400;
+}

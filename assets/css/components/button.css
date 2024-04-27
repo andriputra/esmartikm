@@ -1,0 +1,75 @@
+.button {
+  background-color: var(--background-color);
+  color: var(--contrast-text-color);
+  @apply inline-flex justify-center items-center px-5 py-2 leading-normal primary-800 font-bold rounded focus:outline-none bg-opacity-100 text-opacity-100 border border-transparent transition transform;
+
+  &:hover,
+  &:active,
+  &.expanded {
+    @apply bg-opacity-90;
+  }
+
+  &:active,
+  &.expanded {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .25);
+    @apply bg-opacity-80 shadow-inner;
+  }
+
+  &:hover {
+    @apply scale-105;
+  }
+
+  &:active {
+    @apply scale-95;
+  }
+
+  .icon {
+    @apply transform -translate-x-1.5 w-5 h-6;
+  }
+
+  &[disabled] {
+    @apply opacity-50;
+  }
+}
+
+.button--gradient {
+  @apply bg-gradient-to-r from-primary-900 to-primary-700;
+
+  &:hover,
+  &:active,
+  &.expanded {
+    @apply from-primary-800 to-primary-600;
+  }
+}
+
+.button--outline,
+.button--flat {
+  color: var(--text-color);
+  @apply bg-opacity-0;
+
+  &:hover,
+  &:active,
+  &.expanded {
+    @apply bg-opacity-10;
+  }
+}
+
+.button--outline {
+  border-color: var(--border-color);
+  @apply border-opacity-100;
+
+  &:hover,
+  &:active,
+  &.expanded {
+    @apply bg-opacity-20;
+  }
+}
+
+.button--icon {
+  @apply px-0 py-0 h-10 w-10;
+
+  .icon,
+  .badged-icon {
+    @apply translate-x-0 w-1/2 h-1/2;
+  }
+}

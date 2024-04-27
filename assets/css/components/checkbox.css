@@ -1,0 +1,45 @@
+.checkbox {
+  @apply flex items-center select-none relative pl-8;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox [type=checkbox] {
+  @apply absolute opacity-0 cursor-pointer h-0 w-0;
+}
+
+/* Create a custom checkbox */
+.checkbox__mark {
+  @apply absolute top-1/2 transform -translate-y-1/2 left-0 w-5 h-5 rounded bg-gray-200 border border-transparent transition;
+
+  /* On error */
+  .checkbox--error & {
+    @apply border-primary-700;
+  }
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover [type=checkbox] ~ .checkbox__mark,
+.checkbox [type=checkbox]:checked ~ .checkbox__mark {
+  @apply border-gray-300;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox [type=checkbox]:checked ~ .checkbox__mark {
+  @apply bg-white;
+}
+
+/* Create the checkbox__mark/indicator (hidden when not checked) */
+.checkbox__mark:after {
+  content: "";
+  @apply absolute hidden;
+}
+
+/* Show the checkbox__mark when checked */
+.checkbox [type=checkbox]:checked ~ .checkbox__mark:after {
+  @apply block;
+}
+
+/* Style the checkbox__mark/indicator */
+.checkbox .checkbox__mark:after {
+  @apply w-2 h-5 border-r border-b border-gray-500 transform rotate-45 left-2 bottom-1;
+}

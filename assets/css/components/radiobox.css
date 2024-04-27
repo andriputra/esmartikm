@@ -1,0 +1,45 @@
+.radiobox {
+  @apply flex items-center select-none relative pl-8;
+}
+
+/* Hide the browser's default radiobox */
+.radiobox input {
+  @apply absolute opacity-0 cursor-pointer h-0 w-0;
+}
+
+/* Create a custom radiobox */
+.radiobox__mark {
+  @apply absolute top-1/2 transform -translate-y-1/2 left-0 w-5 h-5 rounded-full bg-gray-200 border border-transparent transition;
+
+  /* On error */
+  .radiobox--error & {
+    @apply border-red-700;
+  }
+}
+
+/* On mouse-over, add a grey background color */
+.radiobox:hover input ~ .radiobox__mark,
+.radiobox input:checked ~ .radiobox__mark {
+  @apply border-gray-300;
+}
+
+/* When the radiobox is checked, add a blue background */
+.radiobox input:checked ~ .radiobox__mark {
+  @apply bg-white;
+}
+
+/* Create the radiobox__mark/indicator (hidden when not checked) */
+.radiobox__mark:after {
+  content: "";
+  @apply absolute hidden;
+}
+
+/* Show the radiobox__mark when checked */
+.radiobox input:checked ~ .radiobox__mark:after {
+  @apply block;
+}
+
+/* Style the radiobox__mark/indicator */
+.radiobox .radiobox__mark:after {
+  @apply w-1/2 h-1/2 bg-gray-500 rounded-full left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2;
+}

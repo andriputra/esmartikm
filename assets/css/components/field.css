@@ -1,0 +1,29 @@
+.field {
+  @apply mb-4;
+
+  &.field--inline {
+    @apply flex space-x-3;
+  }
+}
+
+.field__label {
+  @apply mb-1;
+
+  .field--inline & {
+    @apply w-40 py-2 text-sm;
+  }
+
+  .field--error & {
+    @apply text-red-700;
+  }
+}
+
+.field__input {
+  .field--inline & {
+    @apply flex-1;
+  }
+}
+
+.field__feedback {
+  @apply mt-1 text-sm text-red-700;
+}

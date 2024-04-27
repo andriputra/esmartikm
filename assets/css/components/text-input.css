@@ -1,0 +1,9 @@
+.text-input {
+  input, textarea {
+    @apply focus:shadow-none focus:ring-0 w-full bg-gray-200 bg-opacity-50 hover:border-gray-300 focus:bg-white border border-transparent rounded focus:border-gray-300 disabled:opacity-50 transition placeholder-gray-400;
+
+    .text-input--error& {
+      @apply text-red-700 border-red-700;
+    }
+  }
+}

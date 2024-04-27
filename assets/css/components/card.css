@@ -1,0 +1,7 @@
+.card {
+  @apply bg-white rounded-md border;
+}
+
+.card__body {
+  @apply py-4 px-6;
+}

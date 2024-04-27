@@ -1,0 +1,24 @@
+.avatar {
+  @apply inline-block w-14 relative;
+
+  &:before {
+    content: '';
+    padding-top: 100%;
+    @apply block w-full;
+  }
+
+  & > img, & > span:not(.badge) {
+    @apply absolute w-full h-full inset-0 object-cover flex items-center justify-center rounded-full;
+  }
+
+  & > span:not(.badge) {
+    background-color: var(--background-color);
+    color: var(--contrast-text-color);
+    @apply font-bold blue-700;
+  }
+
+  .badge {
+    font-size: .6rem;
+    @apply absolute bottom-0 right-0 rounded-full px-1 leading-normal;
+  }
+}

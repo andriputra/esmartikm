@@ -1,0 +1,23 @@
+.pagination {
+  @apply flex flex-wrap;
+}
+
+.pagination__item {
+  @apply py-1 px-3 mx-1 rounded cursor-pointer;
+
+  &.total {
+    @apply border-transparent ml-auto cursor-text;
+  }
+
+  &.disabled {
+    @apply opacity-50 cursor-text;
+  }
+
+  &.active {
+    @apply cursor-text shadow font-bold bg-primary-800 text-white;
+  }
+
+  &:hover:not(.disabled, .total, .active) {
+    @apply text-red-700 font-bold;
+  }
+}

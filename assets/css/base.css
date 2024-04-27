@@ -1,0 +1,22 @@
+html {
+  @apply text-gray-700 leading-tight;
+}
+
+body {
+  background-image: url('~assets/img/bg.jpg');
+  @apply font-sans font-normal min-h-screen antialiased overflow-x-hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.text-home{
+  max-width: 76%;
+  border: 2px solid #ffffff;
+  background-color: rgb(255 255 255 / 36%);
+  color: #000000;
+  text-align: justify;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 0 auto;
+}

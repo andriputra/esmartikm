@@ -1,0 +1,23 @@
+.top-bar-wrapper {
+  /* background-image: url('~assets/img/header-bg.png'); */
+  background-color: #ffffff;
+  @apply relative lg:sticky top-0 z-20;
+
+  &:before {
+    content: '';
+    @apply absolute ;
+  }
+
+  &:after {
+    content: '';
+    @apply absolute;
+  }
+}
+
+.top-bar {
+  @apply p-5 h-24 flex flex-wrap items-center gap-x-6 gap-y-5;
+
+  > img {
+    @apply h-10 lg:h-12;
+  }
+}

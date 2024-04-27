@@ -1,0 +1,70 @@
+/* Reset tippy styles first */
+[data-theme="dropdown"] {
+  @apply bg-transparent text-current text-base leading-normal;
+
+  .tippy-content {
+    @apply p-0;
+  }
+
+  .tippy-arrow {
+    @apply hidden;
+  }
+}
+
+.dropdown {
+  min-width: 11rem;
+  @apply bg-white shadow-md rounded relative;
+}
+
+.dropdown--menu {
+  @apply py-2;
+}
+
+.dropdown--menu__heading {
+  @apply py-2 px-3 font-bold;
+}
+
+.dropdown--menu__item {
+  @apply block transition-all duration-300;
+
+  a {
+    @apply flex items-center py-2 px-3 relative hover:bg-gray-100 active:shadow-inner;
+  }
+
+  .icon {
+    @apply mr-2 w-4 h-4;
+  }
+}
+
+.dropdown--menu__divider {
+  @apply border-b border-black border-opacity-5 my-2;
+}
+
+.dropdown--menu__item__skewer {
+  @apply relative overflow-hidden;
+
+  &:before {
+    content: '';
+    @apply absolute transform -translate-x-full -mx-2 rounded-r -left-3 top-1 bottom-1 w-14 bg-white bg-opacity-50 transition-all duration-300;
+  }
+
+  a {
+    @apply relative transition-transform transform;
+  }
+
+  .icon {
+    @apply transition-all;
+  }
+
+  .dropdown--menu__item:hover &:before {
+    @apply -translate-x-0 -skew-x-12;
+  }
+
+  .dropdown--menu__item:hover & a {
+    @apply -skew-x-12;
+  }
+
+  .dropdown--menu__item:hover & .icon {
+    @apply mr-4;
+  }
+}

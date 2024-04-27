@@ -1,0 +1,3 @@
+.loading {
+  @apply animate-spin w-20 h-20 text-gray-300;
+}

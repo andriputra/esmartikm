@@ -1,0 +1,18 @@
+.footer-wrapper {
+  background-image: url('~assets/img/bg-footer.png');
+  background-color: transparent;
+  padding-top: 20%;
+  @apply relative bg-cover z-[-1] -mt-20;
+
+  &:before {
+    content: none;
+    background-image: url('~assets/img/footer-clip.svg');
+    background-size: 100% auto;
+    @apply bg-no-repeat absolute top-[-1px] left-0 w-full h-full z-[2];
+  }
+
+  &:after {
+    content: none;
+    @apply absolute inset-0 bg-blue-900 opacity-50 z-[1];
+  }
+}

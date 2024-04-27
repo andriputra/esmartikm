@@ -1,0 +1,9 @@
+.badge {
+  background-color: var(--background-color);
+  color: var(--contrast-text-color);
+  @apply px-2 inline-flex leading-relaxed rounded text-xs gray-600 bg-opacity-100;
+}
+
+.badge--empty {
+  @apply w-2.5 h-2.5 px-0;
+}

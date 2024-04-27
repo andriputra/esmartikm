@@ -1,0 +1,28 @@
+.header {
+  @apply flex flex-col justify-center px-10 gap-y-2 lg:gap-y-4 transition-all mt-14 lg:mt-28 mb-14;
+  &.auth{
+    margin: 3rem 0;
+    padding: 0px;
+  }
+  h1 {
+    @apply font-cursive lg:text-8xl pb-5 transition-all bg-clip-text;
+    font-size: 5rem;
+    line-height: 1;
+    text-shadow: none;
+    color: #ffffff;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl font-cursive;
+    text-shadow: none;
+    color: #ffffff;
+  }
+
+  p {
+    @apply text-xl lg:text-3xl font-bold;
+  }
+
+  .home & {
+    height: 963px;
+  }
+}
