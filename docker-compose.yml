@@ -10,3 +10,4 @@ services:
       - ./:/usr/src/app
     environment:
       HOST: 0.0.0.0
+    command: sh -c "npm run start > /dev/null 2>&1 &"

@@ -3,20 +3,118 @@ html {
 }
 
 body {
-  background-image: url('~assets/img/bg.jpg');
   @apply font-sans font-normal min-h-screen antialiased overflow-x-hidden;
+}
+.home-section{
+  background-image: url('~assets/img/bg.jpg');
   background-size: cover;
-  background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
+  height: 100vh;
+  margin-bottom: 4rem;
+  position: relative;
+  padding-top: 2rem;
 }
-.text-home{
+.home-section .header{
+  padding-top: 1rem;
+  margin-top: 0px;
+}
+@media (min-width: 320px) and (max-width: 768px){
+  .home-section .header {
+    margin-bottom: 10px;
+  }
+}
+.home-section .text-home{
   max-width: 76%;
   border: 2px solid #ffffff;
-  background-color: rgb(255 255 255 / 36%);
+  background-color: rgb(255 255 255 / 53%);
   color: #000000;
   text-align: justify;
   line-height: 24px;
   font-weight: 500;
-  margin: 0 auto;
+  margin: 0 auto 40px;
+}
+.home-section .text-home p{
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+.home-section .section-home-end{
+  background-image: url('~assets/img/bg-footer.png');
+  display: block;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0px;
+}
+@media (min-width: 320px) and (max-width: 768px){
+  .section-content-end {
+    height: 100px;
+    margin-bottom: -10px;
+  }
+}
+
+.login-area{
+  background-image: url('~assets/img/bg.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 89.9vh;
+  position: relative;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+.footer-login-area{
+  background-image: url('~assets/img/bg-footer.png');
+  display: block;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.content-home{
+  position: relative;
+}
+.section-content-end{
+  background-image: url('~assets/img/bg-footer.png');
+  display: block;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  bottom: 0px;
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+  .home-section{
+    height: auto;
+  }
+  .home-section .text-home {
+    text-align: left;
+    line-height: 39px;
+    padding: 20px;
+  }
+  .home-section .section-home-end{
+    width: 100%;
+    height: 100px;
+    position: unset;
+  }
+  .login-area {
+    height: auto;
+    overflow: auto;
+    margin-bottom: -8px;
+  }
+  .footer-login-area {
+    width: 100%;
+    height: 100px;
+    position: unset;
+    bottom: 0px;
+  }
 }
