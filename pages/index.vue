@@ -104,7 +104,7 @@
             <div class="p-5">
               <div class="flex justify-between items-center">
                 <h4 class="text-2xl font-bold">
-                  E-Katalog BBWI
+                  E-Katalog
                 </h4>
                 <filter-subcategory :event-id="activeEvents[0].id" />
               </div>
